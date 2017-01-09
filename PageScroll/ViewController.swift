@@ -37,19 +37,19 @@ class ViewController: UIViewController {
             let imageView = UIImageView(image: image)
             images.append(imageView)
             
-            //          adjusting the position of the scroll view items so they appear offscreen but will snap into place when swiped
+//          adjusting the position of the scroll view items so they appear offscreen but will snap into place when swiped
             var newX: CGFloat = 0.0
             
             
-            //          get the screen position and this will move each sequential item in the for loop off the screen the exact amount we need
+//          get the screen position and this will move each sequential item in the for loop off the screen the exact amount we need
             newX = scrollWidth / 2 + scrollWidth * CGFloat(x)
             contentWidth += newX
             
             
-            //          Add subviews
+//          Add subviews
             scrollView.addSubview(imageView)
             
-            //          set frame of imageView
+//          set frame of imageView
             imageView.frame = CGRect(x: newX - 75, y: (scrollView.frame.size.height / 2) - 75 /*to get half of the icons height*/, width: 150, height: 150)
             
         }
